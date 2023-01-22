@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="../css/errors.css" type="text/css">
+<link rel="stylesheet" href="../css/dashboard.css" type="text/css">
+
+<script defer src="../js/toggler.js" type="text/javascript"></script>
+<script src="../js/notification.js" type="text/javascript" defer></script>
+<script src="../js/logout.js" type="text/javascript" defer></script>
+<script src="../js/Helpers.js" type="text/javascript" defer></script>
+
+
+<div class="dashboard-wrapper">
+    <div class="dashboard-container">
+        <div class="dashboard">
+
+            <!-- side bar  -->
+            <%- include("./partials/_sidebar"); %>
+
+
+                <div class="dashboard-main">
+
+                    <!-- notofication pannel -->
+                    <%- include("./partials/_notification"); %>
+
+                        <!-- notofication pannel -->
+                        <%- include("./partials/_topheader"); %>
+
+
+                            <div class="page-index">
+                                <div class="page-header">
+                                    <h1>Dashboard</h1>
+                                    <p class="page-title">Admin / <a href="javascript:void(0)">Dashboard</a></p>
+                                </div>
+                            </div>
+
+                            <div class="card-wrapper">
+                                <div class="card-container">
+                                    <div class="card" style="background-color:#FFE5D9">
+                                        <div class="card-description">
+                                            <h1 class="card-heading view-students">
+                                                <a href="javascript:void(0)">Total Students Enrolled</a>
+                                            </h1>
+                                            <p>
+                                                <%= locals.students %>
+                                            </p>
+                                        </div>
+                                        <div class="cardIcon">
+                                            <img src="./svg/college-studying.svg" style="width:46px">
+                                        </div>
+                                    </div>
+                                    <div class="card" style="background-color:#CAF1DE">
+                                        <div class="card-description">
+                                            <h1 class="card-heading view-company-lists">
+                                                <a href="/dashboard/examdetails">Total Companies Listed</a>
+                                            </h1>
+                                            <p>
+                                                22
+                                            </p>
+                                        </div>
+                                        <div class="cardIcon">
+                                            <img src="./svg/edit-list.svg" style="width:46px">
+                                        </div>
+                                    </div>
+                                    <div class="card" style="background-color:#D6CDEA">
+                                        <div class="card-description">
+                                            <h1 class="card-heading view-employees">
+                                                <a href="javascript:void(0)">Total Employees</a>
+                                            </h1>
+                                            <p>
+                                                <%= locals.employees %>
+                                            </p>
+                                        </div>
+                                        <div class="cardIcon">
+                                            <img src="./svg/employees.svg" style="width:52px">
+                                        </div>
+                                    </div>
+
+                                    <div class="card" style="background-color:#ABF1BC">
+                                        <div class="card-description">
+                                            <h1 class="card-heading view-interviews">
+                                                <a href="interviews">Total Interview Created</a>
+                                            </h1>
+                                            <p>
+                                                <%= locals.interviews%>
+                                            </p>
+                                        </div>
+                                        <div class="cardIcon">
+                                            <img src="./svg/enrollment.svg" style="width:52px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                </div> <!-- /dashboard main -->
+
+        </div> <!-- /dashboard -->
+
+    </div> <!-- /dashboard container-->
+</div>

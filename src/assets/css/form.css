@@ -1,0 +1,95 @@
+div.form__wrapper{
+  max-width: 400px;
+  margin:0 auto;
+  background-color: #f9fbfb;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height:72vh;
+  overflow: auto;
+}
+
+div.form__wrapper h1{
+font-size:1.4rem;
+text-align: center;
+font-weight:400;
+margin-bottom:1.2em;
+color: rgba(255,58,58,1);
+}
+
+div.form__wrapper form{
+    padding:2rem 1rem;
+}
+
+div.form__wrapper form label{
+    display:block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgb(126, 124, 124);
+}
+
+div.form__wrapper form input{
+    width:100%;
+    font-size: 0.84rem;
+    padding:0.5rem;
+    margin-top:0.5em;
+    margin-bottom:0.8em;
+    background: transparent;
+    border-bottom:1px solid #e3e3e3;
+}
+
+div.form__wrapper form div.form-group{
+    display:flex;
+}
+
+div.form__wrapper form input:focus{
+    outline:1px solid var(--clr-assets);
+}
+
+div.form__wrapper form select{
+    border:none;
+    outline:none;
+    background: transparent;
+}
+div.form__wrapper form select:focus{
+    outline:1px solid var(--clr-assets);
+}
+
+div.form__wrapper form button[type="submit"]{
+    background-color:var( --clr-green);
+    color:#f1f1f1;
+    padding:0.6rem 1.2rem;
+    margin-top:1.2em;
+}
+
+div.form__wrapper form button[type="submit"]:focus ,
+div.form__wrapper form button[type="submit"]:hover{
+    outline: 1px solid #000;
+    outline-offset:4px;
+}
+
+
+/* ======== INTERVIEW FORM ======== */
+
+
+form.interview__form select{
+ width:100%;
+ margin-top:0.8em;
+ margin-bottom:1.2em;
+ font-family:inherit;
+ padding:0.6rem;
+ font-size: 0.84rem;
+ cursor: pointer;
+}
+
+div.form__wrapper form textarea{
+    width: 100%;
+    margin-top:1em;
+    font-family: inherit;
+    padding: 0.5rem;
+    border:none;
+    outline:1px solid #e3e3e3;
+    background: transparent;
+}
+
+div.form__wrapper form textarea:focus{
+    outline:1px solid var(--clr-assets);
+}

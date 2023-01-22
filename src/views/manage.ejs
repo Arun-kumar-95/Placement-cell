@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="../css/dashboard.css">
+
+<script defer src="../js/toggler.js" type="text/javascript"></script>
+<script src="../js/notification.js" type="text/javascript" defer></script>
+<script defer src="./js/logout.js" type="text/javascript"></script>
+
+<div class="dashboard-wrapper">
+    <div class="dashboard-container">
+        <div class="dashboard">
+
+            <!-- side  bar -->
+            <%- include("./partials/_sidebar"); %>
+
+
+                <div class="dashboard-main">
+                    <!-- notification -->
+                    <%- include("./partials/_notification"); %>
+
+                        <!-- notofication pannel -->
+                        <%- include("./partials/_topheader"); %>
+
+                            <div class="page-index">
+                                <div class="page-header">
+                                    <h1>Manage</h1>
+                                    <p class="page-title">Admin / <a href="javascript:void(0)">Manage</a></p>
+                                </div>
+                            </div>
+
+                            <div class="card-wrapper">
+                                <div class="card-container">
+                                    <div class="card" style="background-color:#FFE5D9">
+                                        <div class="card-description">
+                                            <h1 class="card-heading view-all-exams">
+                                                <a href="allstudents">See All Students</a>
+                                            </h1>
+                                            <span>*This section will help you in finding and managing students</span>
+                                        </div>
+                                        <div class="cardIcon" style="padding-bottom:0.5rem">
+                                            <img src="./svg/search.svg" style="width:46px" />
+                                        </div>
+                                    </div>
+
+                                    <div class="card" style="background-color:#ABF1BC">
+                                        <div class="card-description">
+                                            <h1 class="card-heading create-exam">
+                                                <a href="registerstudent">Register Student</a>
+                                            </h1>
+                                            <span>*This section will help you in adding a new student.</span>
+                                        </div>
+                                        <div class="cardIcon" style="padding-bottom:0.5rem">
+                                            <img src="./svg/signup.svg" alt="create" style="width:46px" />
+                                        </div>
+                                    </div>
+
+                                    <div class="card" style="background-color:#CAF1DE">
+                                        <div class="card-description">
+                                            <h1 class="card-heading view-all-exams">
+                                                <a href="createinterview">Create an Interview</a>
+                                            </h1>
+                                            <span>*This section will help you in creating a new interview.</span>
+                                        </div>
+                                        <div class="cardIcon" style="padding-bottom:0.5rem">
+                                            <img src="./svg/enrollment.svg" alt="create" style="width:46px" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                </div> <!-- /dashboard main -->
+
+        </div> <!-- /dashboard -->
+
+    </div> <!-- /dashboard container-->
+</div>

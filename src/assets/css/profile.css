@@ -1,0 +1,239 @@
+div.student__profile__wrapper div.wrapper {
+    display:flex;
+}
+
+/* ======= PROFILE RESULT ====== */
+div.student__profile__result{
+    width: 96%;
+    margin:0 2%;
+}
+
+ div.student__profile__wrapper h2{
+    font-size: 0.94rem;
+    font-weight: 500;
+    margin-bottom:1.2em;
+}
+
+div.student__profile__wrapper div.wrapper table{
+    margin:0;
+}
+
+div.student__profile__wrapper div.wrapper table:first-child{
+  
+    border:1px solid;
+    border-right:0px;
+    flex:1;
+}
+
+div.student__profile__wrapper div.wrapper table:last-child{
+  border:1px solid;
+  border-left: 0px;
+}
+div.student__profile__wrapper  table p{
+    font-size: 0.84rem;
+}
+div.student__profile__wrapper table{
+   
+    border-collapse: collapse;
+    margin-left:2%;
+}
+
+div.student__profile__wrapper table th{
+    background-color: var(--clr-green);
+    color:#f2f2f2;
+    font-size: 0.84rem;
+    font-weight: 500;
+    padding: 0.15rem 0.25rem;
+}
+div.student__profile__wrapper table tr{
+    text-align: center;
+    border-bottom: 1px solid;
+}
+div.student__profile__wrapper table td{
+    padding:0.25rem 0;
+}
+div.student__profile__wrapper table tr:last-child{
+    border-bottom:none;
+}
+
+div.student__profile__wrapper table button.btn-result{
+    padding:0.25rem 0.5rem;
+}
+div.student__profile__wrapper table button.btn-result:focus  ,
+div.student__profile__wrapper table button.btn-result:hover{
+    outline: 1px solid;
+    background-color: var(--clr-red);
+    border-radius: 0.15rem;
+    -webkit-border-radius: 0.15rem;
+    -moz-border-radius: 0.15rem;
+    -ms-border-radius: 0.15rem;
+    -o-border-radius: 0.15rem;
+}
+
+div.student__profile__wrapper table button.btn-result:hover > svg{
+    fill:red;
+}
+
+ 
+
+/* ======= PROFILE LISTS ====== */
+
+
+div.student__profile__interview__list table{
+    width:96%;
+    margin-right:2%;
+    outline:1px solid;
+}
+  
+div.student__profile__interview__list  h2{
+    margin-top:2em;
+        margin-left:2%;
+}    
+ 
+div.student__profile__interview__list table p{
+    line-height: 1.3;
+}
+
+
+   div.student__profile__interview__list  table th{
+       background-color: var(--clr-navbg);
+       color:#f2f2f2;   
+    }
+    div.student__profile__interview__list  table td{
+     padding:0.5rem;
+    }
+
+   div.student__profile__interview__list table  button{
+       padding:0.3rem 0.5rem;
+       border-radius: 0.25rem;
+       -webkit-border-radius: 0.25rem;
+       -moz-border-radius: 0.25rem;
+       -ms-border-radius: 0.25rem;
+       -o-border-radius: 0.25rem; 
+       color:#f2f2f2;
+       width:60px;
+    }
+    
+    div.student__profile__interview__list table  button.applied__for__interview{
+        background-color: var(--clr-green);
+        pointer-events: none;
+    }
+    div.student__profile__interview__list table  button.apply__for__interview{
+        background-color: rgb(243, 79, 79)
+    }
+
+    
+
+
+    /* ======= APPLY CONFIRM POPUP  ========== */
+
+div.apply__pannel__confirmation ,
+div.create__report__student__form{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height:100vh;
+    z-index: 99;
+}
+
+
+div.confirmation__container, 
+div.create__report{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    padding:1.2rem;
+    transform: translate(-50% ,-50%);
+    -webkit-transform: translate(-50% ,-50%);
+    -moz-transform: translate(-50% ,-50%);
+    -ms-transform: translate(-50% ,-50%);
+    -o-transform: translate(-50% ,-50%);
+    background-color:#fff;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+div.confirmation__container p{
+    text-align: center;
+}
+div.confirmation__container button,
+div.create__report button{
+    display:inline-block;
+    outline: 1px solid;
+    padding:0.5rem 1rem;
+    border-radius: 0.25rem;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    -ms-border-radius: 0.25rem;
+    -o-border-radius: 0.25rem;
+    margin-top: 1em;
+    color:#f2f2f2;
+    min-width: 120px;
+    transition:all 250ms ease;
+    -webkit-transition:all 250ms ease;
+    -moz-transition:all 250ms ease;
+    -ms-transition:all 250ms ease;
+    -o-transition:all 250ms ease;
+} 
+
+div.confirmation__container button.btn-apply-yes,
+div.create__report button.btnReport{
+    background-color: var(--btn-secondary);
+}
+div.confirmation__container button.btn-cancel,
+div.create__report button.btnCancelReport{
+    background-color: var(--btn-primary);
+}
+
+div.confirmation__container button:hover ,
+div.confirmation__container button:focus ,
+div.create__report button:hover ,
+div.create__report button:focus {
+    outline: 1px solid;
+    background: transparent;
+    color:var(--clr-black);
+ 
+}
+
+
+/* ======= CREATE REPORT POPUP ======= */
+div.create__report{
+    min-width: 320px;
+    min-height: 250px;
+
+}
+div.create__report h2{
+    text-align: center;
+    margin-top:0.5em;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--clr-black);
+}
+
+div.create__report select{
+    width: 100%;
+    display:block;
+    padding:0.25rem 0.65rem;
+    border: none;
+    border:1px solid;
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+div.create__report div.btn__controls{
+  margin-top:2em;
+}
+
+div.create__report button.btnReport{
+    margin-right:1.2em;
+    margin-left:1em;
+}
+

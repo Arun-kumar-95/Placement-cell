@@ -1,0 +1,141 @@
+div.interview-lists{
+    width: 96%;
+    margin:0 auto;
+}
+div.interview__container{
+    background-color: #f9fbfb;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    outline: 1px solid;
+}
+
+div.interview{
+    display:flex;
+    align-items: center;
+}
+
+div.interview div.interview-index{
+    display:inline-flex;
+} 
+
+div.interview span{
+    padding:0.25rem 0.5rem;
+    text-align:center;
+}
+
+div.interview div{
+    padding:0rem 0.5rem;
+    text-align: left;
+}
+
+div.interview h3{
+    font-size: 0.9rem;
+    font-weight: 500;
+    
+}
+
+div.interview-venue{
+    flex-grow: 1;
+    min-width: 8rem;
+}
+
+div.delete-wrap{
+    min-width: 2rem;
+}
+
+button.btn-delete:hover > svg{
+    fill: var(--btn-primary);
+}
+ 
+
+div.interview__container:first-child{
+    background-color: var(--clr-navbg);
+    color: #f2f2f2;
+}
+
+div.interview{
+    border-bottom:1px solid;
+}
+div.interview p{
+    line-height: 1.5;
+}
+
+div.interview:last-child{
+    border-bottom:none;
+}
+ 
+input[type="checkbox"]{
+    cursor: pointer;
+}
+
+/* == student__details ===*/
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table  thead{
+    background-color: var(--clr-red);
+    color: var(--clr-black);
+    
+}
+table th{
+    text-align: left;
+    padding: 0.25rem 0.5em;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+ 
+
+table td{
+    font-size: 0.84rem;
+    padding:0.25rem 0 0.25rem 0.5rem;   
+}
+ 
+@media only screen and (min-width: 961px) {
+    
+div.interview div{
+    padding:0rem 0.75rem;
+  
+}
+ 
+
+div.company-name,
+div.interview-date,
+div.role{
+    min-width: 6rem;
+}
+div.applied-students{
+    min-width: 4rem;
+    text-align: center;
+}
+ 
+ 
+}
+
+@media only screen and (min-width: 1140px) {
+    
+div.interview div{
+    padding:0rem 1rem;
+  
+}
+div.interview span{
+    padding:0.5rem 0.75rem;
+    text-align:center;
+}
+
+div.company-name{
+    min-width: 8rem;
+}
+div.applied-students{
+    min-width: 4rem;
+    text-align: center;
+}
+
+div.interview-date,
+div.role{
+    min-width:10rem;
+}
+ 
+}

@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/form.css">
+<link rel="stylesheet" href="../css/error.css">
+
+<script defer src="../js/toggler.js" type="text/javascript"></script>
+<script src="../js/notification.js" type="text/javascript" defer></script>
+<script src="../js/createinterview.js" type="text/javascript" defer></script>
+<script src="../js/Helpers.js" type="text/javascript" defer></script>
+<script defer src="./js/logout.js" type="text/javascript"></script>
+
+<div class="dashboard-wrapper">
+    <div class="dashboard-container">
+        <div class="dashboard">
+
+            <!-- side bar -->
+
+            <%- include("./partials/_sidebar"); %>
+
+                <div class="dashboard-main">
+
+                    <!-- notification -->
+                    <%- include("./partials/_notification"); %>
+
+                        <!-- notofication pannel -->
+                        <%- include("./partials/_topheader"); %>
+
+                            <div class="page-index">
+                                <div class="page-header">
+                                    <h1>Create Interview</h1>
+                                    <p class="page-title">Admin / <a href="javascript:void(0)">Create Interview</a></p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form__wrapper interview__form__wrapper">
+                                <form action="" class="interview__form">
+
+                                    <h1>Create An Interview</h1>
+                                    <label for="company">Comnany Name</label>
+                                    <select name="company" id="companyname">
+                                        <option value="">Select company name</option>
+                                        <option value="Tata Consultancy Services (TCS)">Tata Consultancy Services (TCS)
+                                        </option>
+                                        <option value="Accenture"> Accenture</option>
+                                        <option value="Cognizant">Cognizant</option>
+                                        <option value="Infosys">Infosys</option>
+                                        <option value="Capgemini">Capgemini</option>
+                                        <option value="Wipro">Wipro</option>
+                                        <option value="IBM">IBM</option>
+                                        <option value="HCL Technologies">HCL Technologies</option>
+                                        <option value="Larsen and Toubro">Larsen and Toubro</option>
+                                        <option value="Deloitte">Deloitte</option>
+                                    </select>
+                                    <label for="role">Role</label>
+
+                                    <select name="role" id="role">
+                                        <option value="">Select Role for the company</option>
+                                        <option value="Software enginee">Software engineer</option>
+                                        <option value="Business analyst">Business analyst</option>
+                                        <option value="Sales representative">Sales representative</option>
+                                        <option value="Marketing manager">Marketing manager</option>
+                                        <option value="Product manager">Product manager</option>
+                                        <option value="Human resources manager">Human resources manager</option>
+                                        <option value="Front-end Role">Front-end Role</option>
+                                        <option value="Back-end Role">Back-end Role</option>
+                                        <option value="Nodejs Developer">Nodejs Developer</option>
+                                        <option value="React Developer">React Developer</option>
+                                    </select>
+
+                                    <label for="date">Interview Date</label>
+                                    <input type="date" required autocomplete="off" name="date" />
+
+                                    <label for="venue">Venue:</label>
+                                    <textarea name="venue" id="venue" cols="30" rows="5"
+                                        placeholder="Write venue here"></textarea>
+                                    <button type="submit">Submit</button>
+                                </form>
+
+                            </div>
+                </div> <!-- /dashboard main -->
+
+        </div> <!-- /dashboard -->
+
+    </div> <!-- /dashboard container-->
+</div>

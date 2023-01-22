@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/error.css" type="text/css">
+
+<script src="../js/Helpers.js" type="text/javascript" defer></script>
+<script src="../js/index.js" type="text/javascript" defer></script>
+
+<%- include("./partials/_header"); %>
+
+    <main>
+        <%- include("./partials/_banner"); %>
+            <div class="login form__wrapper">
+
+                <form action="" method="post" role="login-form" class="login__form">
+                    <div class="login_wrap form__container">
+                        <h1>Account Login</h1>
+                        <label for="email">Email</label>
+                        <div class="form-group">
+                            <button role="login-svg" class="formSvgBtn">
+                                <svg fill="currentColor" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                    focusable="false"
+                                    style="pointer-events: none; display: block; width:26px; height:26px;">
+                                    <g>
+                                        <path
+                                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </button>
+                            <input type="email" name="email" id="email__input" placeholder="Enter email"
+                                autocomplete="off" required  autofocus />
+                        </div>
+
+
+                        <label for="password">Password</label>
+                        <div class="form-group">
+                            <button role="password-svg" class="formSvgBtn">
+                                <svg fill="currentColor" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"
+                                    focusable="false"
+                                    style="pointer-events: none; display: block; width:26px; height:26px">
+                                    <g>
+                                        <path
+                                            d="M10.4727273,8 C9.87272727,6.2525 8.26181818,5 6.36363636,5 C3.95272727,5 2,7.01375 2,9.5 C2,11.98625 3.95272727,14 6.36363636,14 C8.26181818,14 9.87272727,12.7475 10.4727273,11 L13.6363636,11 L13.6363636,14 L16.5454545,14 L16.5454545,11 L18,11 L18,8 L10.4727273,8 Z M6.36363636,11 C5.56,11 4.90909091,10.32875 4.90909091,9.5 C4.90909091,8.67125 5.56,8 6.36363636,8 C7.16727273,8 7.81818182,8.67125 7.81818182,9.5 C7.81818182,10.32875 7.16727273,11 6.36363636,11 Z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </button>
+                            <input type="password" name="password" id="password" placeholder="Enter Password"
+                                autocomplete="off" required />
+                        </div>
+
+                        <p>
+                            Don't have an account?
+                            <a href="register" style="color:blue">Click here</a>
+                        </p>
+                        <button type="submit" id="login__btn" role="login button" class="btn--action">Login</button>
+                    </div>
+                </form>
+            </div>
+    </main>

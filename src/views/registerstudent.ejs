@@ -1,0 +1,116 @@
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/form.css">
+<link rel="stylesheet" href="../css/error.css">
+
+<script defer src="../js/toggler.js" type="text/javascript"></script>
+<script src="../js/notification.js" type="text/javascript" defer></script>
+<script src="../js/Helpers.js" type="text/javascript" defer></script>
+<script src="../js/registerstudent.js" type="text/javascript" defer></script>
+<script defer src="./js/logout.js" type="text/javascript"></script>
+
+<div class="dashboard-wrapper">
+    <div class="dashboard-container">
+        <div class="dashboard">
+
+            <!-- notification -->
+            <%- include("./partials/_sidebar"); %>
+
+                <div class="dashboard-main">
+                    <!-- side bar -->
+                    <%- include("./partials/_notification"); %>
+
+
+                        <!-- notofication pannel -->
+                        <%- include("./partials/_topheader"); %>
+
+                            <div class="page-index">
+                                <div class="page-header">
+                                    <h1>Dashboard</h1>
+                                    <p class="page-title">Admin / <a href="javascript:void(0)">Register student</a></p>
+                                </div>
+                            </div>
+
+                            <!-- register  from -->
+                            <div class="form__wrapper">
+                                <form action="" method="POST" class="register__student">
+                                    <h1>Register student</h1>
+                                    <label for="name">Full name</label>
+                                    <input type="text" placeholder="Enter name" name="name" required
+                                        autocomplete="off" />
+
+                                    <label for="age">Age: </label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter age" name="age" required
+                                            autocomplete="off">
+
+                                        <select name="gender" id="gender">
+                                            <option value="">Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <label for="phone">Phone</label>
+                                    <input type="text" placeholder="Enter phone number" name="phone" required
+                                        autocomplete="off">
+
+                                    <label for="email">Email</label>
+                                    <input type="text" placeholder="Enter email address" name="email" required
+                                        autocomplete="off">
+
+                                    <label for="college">College name</label>
+                                    <input type="text" placeholder="Enter college name" name="college" required
+                                        autocomplete="off">
+
+
+
+                                    <div class="form-group" style="margin:1.2em 0;">
+
+                                        <!-- <input type="text" placeholder="Enter batch" name="batch" required
+                                            autocomplete="off"> -->
+                                        <select name="batch" id="batch" style="width: 70%;">
+                                            <option value="">Batch</option>
+                                            <option value="Jan-15">Jan-15</option>
+                                            <option value="Feb-15">Feb-25</option>
+                                            <option value="March-15">March-15</option>
+                                            <option value="Aug-10">Aug-10</option>
+                                            <option value="Sep-15">Sep-15</option>
+                                            <option value="Oct-15">Oct-15</option>
+                                            <option value="Nov-10">Nov-10</option>
+
+                                        </select>
+
+
+                                        <select name="status" id="status" style="width: 30%;">
+                                            <option value="">Status</option>
+                                            <option value="Placed">Placed</option>
+                                            <option value="Not-Placed">Not-Placed</option>
+                                        </select>
+
+                                    </div>
+
+                                    <label for="score">Courses Scores</label>
+
+                                    <div class="form-group">
+
+                                        <input type="text" placeholder="DSA score" name="dsascore" required
+                                            autocomplete="off">
+                                        <input type="text" placeholder="WebD score" name="webdscore" required
+                                            autocomplete="off">
+                                        <input type="text" placeholder="React score" name="reactscore" required
+                                            autocomplete="off">
+
+                                    </div>
+
+                                    <button type="submit">Register</button>
+                                </form>
+
+                            </div>
+
+
+                </div> <!-- /dashboard main -->
+
+        </div> <!-- /dashboard -->
+
+    </div> <!-- /dashboard container-->
+</div>

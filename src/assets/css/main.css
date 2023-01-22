@@ -1,0 +1,155 @@
+:root{
+    --max-width:100%;
+    --min-height:100vh;
+    --min-height:320px;
+  
+  
+    
+  
+    /* ========
+       TYPOGRAPHY
+       ============ */
+  
+       --base-size: 62.5% !important;
+       --body-copy: 0.84rem;
+
+
+       --h1-size: 2rem;
+       --h2-size: 1.35rem;
+       --h3-size: 1.5rem;
+       --h4-size: 1.15rem;
+
+       --fontf: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+        /* ========
+       FONT WEIGHT
+       ============ */
+       --fw-regular:400;
+       --fw-medium:500;
+       --fw-semi-bold:600;
+
+
+        /* ========
+         COLOR
+       ============ */
+
+       --clr-primary:#FE724C;;
+       --clr-secondary: #007DFE;
+       --btn-primary: #FE724C;
+       --btn-secondary: #007DFE;
+
+       --clr-black:#414342;
+       --clr-navbg: #36404e;
+       --clr-gray:#f5f5f5;
+       --clr-assets:#287bff;
+       --clr-black-2:#999;
+       --clr-red:#FDE9D9;
+       --clr-green:#27AE60;
+
+  }
+  
+  
+  * , *::before, *::after{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  
+   /* ========
+       HTML
+       ============ */
+  
+  html{
+      scroll-behavior: smooth;
+  }
+  
+  :focus{
+      border:none;
+  }
+  
+  
+   /* ========
+       BODY
+       ============ */
+  
+  
+  body {
+      min-width: var(--min-width);
+      min-height:var(--min-height);
+      width: var(--max-width);
+      font-size: var(--base-size);
+      font-family:  var(--fontf);
+      line-height: 1.4rem;
+      user-select: none;
+  }
+  
+  button , select , input{
+      font:font-inherit;
+  }
+  
+  img{
+    max-width: 100%;
+    display: block;
+  }
+
+  button , input{
+    border:none;
+    outline: none;
+  }
+
+  button{
+      background: transparent;
+  }
+  button:hover{
+    cursor: pointer;
+  }
+  span ,a , p , label{
+      font-size: var(--body-copy);
+  }
+  h1{
+      font-size: var(--h1-size);
+  }
+  
+  
+  a{
+    text-decoration: none;
+  }
+  li{
+    list-style-type: none;
+  }
+
+  svg{
+    fill: #989b9f;
+    vertical-align: middle;
+  }
+
+
+  a:focus{
+    text-decoration: underline;
+    border:none;
+    outline: none;
+    color: var(--clr-assets);
+  }
+
+  /* ======= CHANGING THE SIZES OF HEADER  */
+
+  @media only screen and (min-width: 768px) {
+    :root{
+      --h1-size: 2.4rem;
+      --h2-size: 1.75rem;
+      --h3-size: 1.5rem;
+      --h4-size: 1.25rem;
+    }
+
+  }
+
+  @media only screen and (min-width: 961px) {
+    :root{
+      --h1-size: 3rem;
+      --h2-size: 2.5rem;
+      --h3-size: 1.75rem;
+      --h4-size: 1.5rem;
+    }
+
+  }

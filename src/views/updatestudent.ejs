@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/form.css">
+<link rel="stylesheet" href="../css/error.css">
+
+<script defer src="../js/toggler.js" type="text/javascript"></script>
+<script src="../js/notification.js" type="text/javascript" defer></script>
+<script src="../js/Helpers.js" type="text/javascript" defer></script>
+<script src="../js/updatestudent.js" type="text/javascript" defer></script>
+<script defer src="./js/logout.js" type="text/javascript"></script>
+
+
+<div class="dashboard-wrapper">
+    <div class="dashboard-container">
+        <div class="dashboard">
+            <!-- side bar -->
+            <%- include("./partials/_sidebar"); %>
+
+
+                <div class="dashboard-main">
+                    <!-- notification -->
+                    <%- include("./partials/_notification"); %>
+
+                        <!-- notofication pannel -->
+                        <%- include("./partials/_topheader"); %>
+
+                            <div class="page-index">
+                                <div class="page-header">
+                                    <h1>Dashboard</h1>
+                                    <p class="page-title">Admin / <a href="javascript:void(0)">Update student</a></p>
+                                </div>
+                            </div>
+
+
+                            <!-- register  from -->
+                            <div class="form__wrapper">
+                                <form action="" method="POST" class="register__student" id="<%= data[0]._id %>">
+                                    <h1>Update student</h1>
+                                    <label for="name">Full name</label>
+                                    <input type="text" placeholder="Enter name" name="name" required autocomplete="off"
+                                        value="<%= data[0].name %>" />
+
+                                    <label for="age">Age: </label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter age" name="age" required
+                                            autocomplete="off" value="<%= data[0].age %>">
+
+                                        <select name="gender" id="gender">
+                                            <option value="<%= data[0].gender %>">
+                                                <%= data[0].gender %>
+                                            </option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <label for="phone">Phone</label>
+                                    <input type="text" placeholder="Enter phone number" name="phone" required
+                                        autocomplete="off" value="<%= data[0].phone %>">
+
+                                    <label for="email">Email</label>
+                                    <input type="text" placeholder="Enter email address" name="email" required
+                                        autocomplete="off" value="<%= data[0].email %>">
+
+                                    <label for="college">College name</label>
+                                    <input type="text" placeholder="Enter college name" name="college" required
+                                        autocomplete="off" value="<%= data[0].college %>">
+
+
+                                    <label for="batch">Batch</label>
+                                    <div class="form-group">
+
+                                        <input type="text" placeholder="Enter batch" name="batch" required
+                                            autocomplete="off" value="<%= data[0].batch %>">
+
+                                        <select name="status" id="status">
+                                            <option value="<%= data[0].status %>">
+                                                <%= data[0].status %>
+                                            </option>
+                                            <option value="Placed">Placed</option>
+                                            <option value="Not-Placed">Not-Placed</option>
+                                        </select>
+
+                                    </div>
+
+                                    <label for="score">Courses Scores</label>
+
+                                    <div class="form-group">
+
+                                        <input type="text" placeholder="Enter DSA score" name="dsascore" required
+                                            autocomplete="off" value="<%= data[0].score[0].DSA %>">
+                                        <input type="text" placeholder="Enter WebD score" name="webdscore" required
+                                            autocomplete="off" value="<%= data[0].score[0].WEB_DEV %>">
+                                        <input type="text" placeholder="Enter React score" name="reactscore" required
+                                            autocomplete="off" value="<%= data[0].score[0].REACT %>">
+
+                                    </div>
+
+                                    <button type="submit">Update</button>
+                                </form>
+
+                            </div>
+
+
+                </div> <!-- /dashboard main -->
+
+        </div> <!-- /dashboard -->
+
+    </div> <!-- /dashboard container-->
+</div>

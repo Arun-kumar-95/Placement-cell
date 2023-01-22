@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/error.css" type="text/css">
+<link rel="stylesheet" href="../css/verifyForm.css" type="text/css">
+
+<script src="../js/Helpers.js" type="text/javascript" defer></script>
+<script src="../js/verifyOtp.js" type="text/javascript" defer></script>
+
+<%- include("./partials/_header"); %>
+
+    <div class="verify__form">
+        <form action="" method="POST" class="verify__otp__form">
+            <h1>Verify yourself</h1>
+            <input type="text" name="otp" placeholder="Enter otp" required autofocus autocomplete="off" maxlength="4" />
+            <button type="submit" class="btnVerify">Verify</button>
+        </form>
+    </div>

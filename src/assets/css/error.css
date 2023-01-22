@@ -1,0 +1,79 @@
+
+img{
+    max-width: 100%;
+    display: block;
+    height:auto;
+}
+/* ====== 
+   ERROR 
+   ========= */
+
+   div.error__wrapper{
+     position:fixed;
+     bottom:2em;
+     left:50%;
+     transform: translateX(-50%);
+     -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+     -o-transform: translateX(-50%);
+   
+}
+
+div.error__message{
+    display:flex;
+    flex-direction: row;
+    padding:0.75rem 1rem;
+    min-width: 16rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+    -webkit-transition: opacity 300ms ease-out;
+    -moz-transition: opacity 300ms ease-out;
+    -ms-transition: opacity 300ms ease-out;
+    -o-transition: opacity 300ms ease-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+}
+div.error__message.alert {
+    opacity: 1;
+}
+
+/* ======error text ======= */
+div.error__message p{
+    margin-left:0.75em;
+}
+
+/* ========error classes ==== */
+.success{
+    background-color: #010101;
+    color: #f1f1f1;
+}
+
+.false{
+    background-color: #ff7b7b;
+    color: #f1f1f1;
+}
+
+div.m-icon{
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.s-icon{
+    background-image: url(../icons/s-icon.png);
+}
+
+.e-icon{
+    background-image: url(../icons/e-icon.png);
+}
+
+  
