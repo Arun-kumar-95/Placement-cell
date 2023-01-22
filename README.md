@@ -40,9 +40,9 @@ Step: 4
 - JWT_EXPIRES = '7d'
 
 
-TWILIO_SID = 'your twilio sid '
-TWILIO_AUTH_TOKEN = 'your twilio auth token'
-TWILIO_PHONE = 'your twilio phone number'
+- TWILIO_SID = 'your twilio sid '
+- TWILIO_AUTH_TOKEN = 'your twilio auth token'
+- TWILIO_PHONE = 'your twilio phone number'
 
 Note: don't try to change this  DATABASE_URL
 
