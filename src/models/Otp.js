@@ -9,13 +9,10 @@ const otpSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    owner: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Employee",
-    },
+
     createdAt: {
       type: Date,
-      default: Date(Date.now()),
+      default: Date.now(),
       index: { expires: 300 },
     },
   },
@@ -23,3 +20,4 @@ const otpSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model("Otp", otpSchema);
+
