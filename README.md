@@ -14,7 +14,8 @@ To setup the files locally on a system follow these simple steps.
 
 step 1: 
 
-Visit this url: https://github.com/Arun-kumar-95/Placement-cell
+- Visit this url: https://github.com/Arun-kumar-95/Placement-cell
+- live DOC at https://arun-kumar-95.github.io/Placement-cell/
 
 Step: 2
 
