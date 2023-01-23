@@ -74,13 +74,6 @@ module.exports.loginEmployee = async (req, res) => {
     // if we found the doctor then check for password
     const isMatch = await user.matchPassword(password);
 
-      if (!isMatch) {
-      return res.status(400).json({
-        success: false,
-        message: "Incorrect Otp Entered",
-      });
-    }
-    
     if (!isMatch) {
       return res.status(400).json({
         success: false,
@@ -138,6 +131,12 @@ module.exports.verifyEmployee = async (req, res) => {
     }
 
     const isMatch = await bcrypt.compare(otp, otpHolder.otpText);
+    if (!isMatch) {
+      return res.status(400).json({
+        success: false,
+        message: "Incorrect Otp Entered",
+      });
+    }
 
     if (isMatch) {
       // find the user using phone number
@@ -145,6 +144,7 @@ module.exports.verifyEmployee = async (req, res) => {
       const user = await employeeSchema.findOne({ phone });
       // generate the token
       const token = await user.generateToken();
+
       const options = {
         expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
         httpOnly: true,
