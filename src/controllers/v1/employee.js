@@ -13,6 +13,8 @@ const { errorFormatter } = require(path.join(
 
 const { sendOTP } = require(path.join(process.cwd(), "./src/Utils/sendOtp.js"));
 
+const bcrypt = require("bcrypt");
+
 // REGISTER
 module.exports.registerEmployee = async (req, res) => {
   try {
@@ -82,10 +84,12 @@ module.exports.loginEmployee = async (req, res) => {
     // generate otp text
     const otp = await user.generateOTPText();
 
+    // hash the otp
+    const hashedOtp = await bcrypt.hash(otp, 10);
     // create an opt
     let otpDoc = await otpSchema.create({
       phone: user.phone,
-      otpText: otp,
+      otpText: hashedOtp,
     });
 
     await otpDoc.save();
@@ -113,6 +117,7 @@ module.exports.loginEmployee = async (req, res) => {
 module.exports.verifyEmployee = async (req, res) => {
   try {
     const { otp } = req.body;
+
     //  find the otp doc for the
     let otpHolder = await otpSchema.findOne({
       phone: req.cookies.emp_ph,
@@ -125,7 +130,9 @@ module.exports.verifyEmployee = async (req, res) => {
       });
     }
 
-    if (otpHolder.otpText === otp) {
+    const isMatch = await bcrypt.compare(otp, otpHolder.otpText);
+
+    if (isMatch) {
       // find the user using phone number
       const phone = req.cookies.emp_ph;
       const user = await employeeSchema.findOne({ phone });
