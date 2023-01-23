@@ -5,7 +5,7 @@ Hello there!!
  
 I designed an Web App for the companies to keep the track of all the student database. This project holds the functionality of download the data in csv format.
 
- 
+ - live DOC at https://arun-kumar-95.github.io/Placement-cell/
 
 
 ## How to setup project locally:
@@ -15,7 +15,7 @@ To setup the files locally on a system follow these simple steps.
 step 1: 
 
 - Visit this url: https://github.com/Arun-kumar-95/Placement-cell
-- live DOC at https://arun-kumar-95.github.io/Placement-cell/
+
 
 Step: 2
 
