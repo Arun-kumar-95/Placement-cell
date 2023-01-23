@@ -74,6 +74,13 @@ module.exports.loginEmployee = async (req, res) => {
     // if we found the doctor then check for password
     const isMatch = await user.matchPassword(password);
 
+      if (!isMatch) {
+      return res.status(400).json({
+        success: false,
+        message: "Incorrect Otp Entered",
+      });
+    }
+    
     if (!isMatch) {
       return res.status(400).json({
         success: false,
