@@ -6,7 +6,7 @@ Hello there!!
 I designed an Web App for the companies to keep the track of all the student database. This project holds the functionality of download the data in csv format.
 
  - live DOC at https://arun-kumar-95.github.io/Placement-cell/
- - My live project is available on: https://placementcellapp-92c0.onrender.com
+ - My live project is available on: https://placementcellapp-92c0.onrender.com/
 
 Note: I have given the read and write permission so that anyone can read and write the files.
 
